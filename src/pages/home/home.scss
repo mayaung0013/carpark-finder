@@ -1,0 +1,15 @@
+page-home {
+    .backgroundColor {
+        //background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+        background-color:white;
+    }
+    .fontColor{
+        color:black;
+    }
+    .buttonColor{
+        background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    }
+    .buttonColor2{
+        background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);    
+    }
+}

@@ -1,0 +1,17 @@
+page-feedback {
+    .backgroundColor {
+        //background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+        background-color:white;
+    }
+    .fontColor{
+        color:black;
+    }
+    .buttonColor{
+        color:whitesmoke;
+        background-color:#029792;
+    }
+    .buttonColor:hover {
+        background-color: #02706d !important; 
+        color: white;
+    }
+}

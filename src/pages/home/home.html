@@ -1,0 +1,27 @@
+<!--Navigation Bar-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--Home Body-->
+<ion-content padding class="backgroundColor">
+  <br/>
+    <div class="row" style="text-align:center">
+        <div class="col"><img src="assets/imgs/earth-globe.png" alt="img" style="width:55%;height:80%"></div>
+      </div>
+      <div class="row">
+          <div class="col"></div>
+          <div class="col"><h3 class="fontColor">Welcome!</h3></div>
+      </div>
+      <br/>
+      <button ion-button full class="buttonColor">Search Location</button>
+      <br/>
+      <button ion-button full class="buttonColor">Near By You</button>
+      <br/>
+      <button ion-button full class="buttonColor2" (click)="RedirectToFeedBackPage()">Feedback Us</button>
+</ion-content>
