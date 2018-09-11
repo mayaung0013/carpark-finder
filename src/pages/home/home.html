@@ -1,3 +1,4 @@
+
 <!--Navigation Bar-->
 <ion-header>
   <ion-navbar>
@@ -6,22 +7,37 @@
     </button>
     <ion-title>Home</ion-title>
   </ion-navbar>
-</ion-header>
-
+</ion-header>x
 <!--Home Body-->
 <ion-content padding class="backgroundColor">
   <br/>
-    <div class="row" style="text-align:center">
-        <div class="col"><img src="assets/imgs/earth-globe.png" alt="img" style="width:55%;height:80%"></div>
-      </div>
-      <div class="row">
-          <div class="col"></div>
-          <div class="col"><h3 class="fontColor">Welcome!</h3></div>
-      </div>
-      <br/>
-      <button ion-button full class="buttonColor">Search Location</button>
-      <br/>
-      <button ion-button full class="buttonColor">Near By You</button>
-      <br/>
-      <button ion-button full class="buttonColor2" (click)="RedirectToFeedBackPage()">Feedback Us</button>
+  <div class="row text-center">
+    <div class="col">
+    <div class="counter">
+      <ion-icon name="search" class="fa-2x"></ion-icon>
+<h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+ <p class="count-text ">Search Location</p>
+</div>
+</div>
+</div>
+<div class="row text-center">
+  <div class="col">
+  <div class="counter">
+<ion-icon name="locate" class="fa-2x"></ion-icon>
+<h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+<p class="count-text">Near By You</p>
+</div>
+</div>
+</div>
+<div class="row text-center" (click)="RedirectToFeedBackPage()">
+  <div class="col">
+  <div class="counter">
+<i class="fa fa-code fa-2x"></i>
+<ion-icon name="mail"class="fa-2x"></ion-icon>
+<h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+<p class="count-text ">Feedback Us</p>
+</div>
+</div>
+</div>
+<br/>
 </ion-content>
