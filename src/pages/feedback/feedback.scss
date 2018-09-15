@@ -14,4 +14,10 @@ page-feedback {
         background-color: #af5602 !important; 
         color: white;
     }
+    #myInput {
+        width: calc(100% - 10px);
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+    }
 }

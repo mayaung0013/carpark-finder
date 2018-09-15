@@ -1,0 +1,23 @@
+<!--Navigation Bar-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Search Location</ion-title>
+  </ion-navbar>
+</ion-header>
+<!--Home Body-->
+<ion-content padding class="backgroundColor">
+  <ion-item>
+    <ion-input id="SerchAddr" type="text" placeholder="Enter Address"></ion-input>
+    <button ion-button round item-right (click)="RedirectToSearchResultPage()">GO &nbsp;<ion-icon name="arrow-forward"></ion-icon>
+    </button>
+</ion-item>    
+
+<br/>
+<agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+<agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+<br>
+</ion-content>

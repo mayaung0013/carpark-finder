@@ -10,5 +10,4 @@ export class FeedbackPage {
   constructor(public navCtrl: NavController) {
 
   }
-
 }

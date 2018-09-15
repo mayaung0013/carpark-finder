@@ -1,0 +1,31 @@
+<!--Navigation Bar-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Near By</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--Home Body-->
+<ion-content padding class="backgroundColor">
+  <ion-item>
+    <ion-input id="SerchAddr" type="text" placeholder="Enter Address"></ion-input>
+</ion-item>
+<br/>
+<agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+<agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+<br>
+<ngx-datatable
+[sortType]="'multi'"
+[headerHeight]="50"
+[footerHeight]="50"
+[rowHeight]="50"
+[rows]="rows"
+[columns]="columns"
+[columnMode]="'force'"
+[limit]="10">
+</ngx-datatable>
+</ion-content>

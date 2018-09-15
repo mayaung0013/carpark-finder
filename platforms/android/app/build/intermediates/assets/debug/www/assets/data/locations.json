@@ -1,0 +1,34 @@
+{
+   "locations" : [
+      {
+         "carpark" : "Carpark A",
+         "address" : "Something..",
+         "freeSlotCount" : "2"
+      },
+      {
+        "carpark" : "Carpark B",
+        "address" : "Something",
+        "freeSlotCount" : "4"
+      },
+      {
+        "carpark" : "Carpark C",
+        "address" : "Something",
+        "freeSlotCount" : "100"
+      },
+      {
+        "carpark" : "Carpark D",
+        "address" : "Something",
+        "freeSlotCount" : "200"
+      },
+      {
+        "carpark" : "Carpark E",
+        "address" : "Something",
+        "freeSlotCount" : "12"
+      },
+      {
+        "carpark" : "Carpark F",
+        "address" : "Something",
+        "freeSlotCount" : "0"
+      }
+   ]
+}

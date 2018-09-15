@@ -1,13 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/7d489755c9ebd9a1f7a8d015a1491558/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/6b1cf11a404ef4b0eb3d9c1bbe5e3e26/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] /Users/mac/CarparkFinder/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:20:1-27:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
-INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-14:12
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/9fe65395c846ae9f9df065e36bd57691/AndroidManifest.xml:2:1-6:12
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/f40c443b2c503089abcc5893dc67d23f/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/787b79623e767b23206a4f2102439fff/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/e0ab44acf9a21597e77b6d5d191d87c0/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/1a96aa72562d19dd7d37545122372b3d/AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/b5efb478f72e230c5339e79b16186851/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/f562fde15dff564e44095e3c5c1ebb0b/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/58203f2746a60d8cf407f16776b0cb49/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fbc273c958bf777016a2815b052612ff/AndroidManifest.xml:2:1-6:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:1-47:12
 	package
 		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:2:98-124
 		INJECTED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml
@@ -43,7 +57,35 @@ ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManife
 	android:name
 		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:5:5-12:19
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:5:5-32:19
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/7d489755c9ebd9a1f7a8d015a1491558/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/7d489755c9ebd9a1f7a8d015a1491558/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/6b1cf11a404ef4b0eb3d9c1bbe5e3e26/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/6b1cf11a404ef4b0eb3d9c1bbe5e3e26/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/9fe65395c846ae9f9df065e36bd57691/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/9fe65395c846ae9f9df065e36bd57691/AndroidManifest.xml:5:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/f40c443b2c503089abcc5893dc67d23f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/f40c443b2c503089abcc5893dc67d23f/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/787b79623e767b23206a4f2102439fff/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/787b79623e767b23206a4f2102439fff/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/e0ab44acf9a21597e77b6d5d191d87c0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/e0ab44acf9a21597e77b6d5d191d87c0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/1a96aa72562d19dd7d37545122372b3d/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/1a96aa72562d19dd7d37545122372b3d/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/b5efb478f72e230c5339e79b16186851/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/b5efb478f72e230c5339e79b16186851/AndroidManifest.xml:25:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/f562fde15dff564e44095e3c5c1ebb0b/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/f562fde15dff564e44095e3c5c1ebb0b/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/58203f2746a60d8cf407f16776b0cb49/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/58203f2746a60d8cf407f16776b0cb49/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fbc273c958bf777016a2815b052612ff/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fbc273c958bf777016a2815b052612ff/AndroidManifest.xml:5:5-20
 	android:supportsRtl
 		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:5:114-140
 	android:label
@@ -78,11 +120,177 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:9:17-77
 	android:name
 		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:9:27-74
+meta-data#com.google.android.gms.version
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:12:9-122
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:12:66-119
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:12:20-65
+service#com.marianhello.bgloc.sync.SyncService
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:9-18:19
+	android:process
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:96-119
+	android:exported
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:18-41
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:42-95
+intent-filter#android.content.SyncAdapter
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:14:13-16:29
+action#android.content.SyncAdapter
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:15:17-70
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:15:25-67
+meta-data#android.content.SyncAdapter
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:17:13-105
+	android:resource
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:17:67-102
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:17:24-66
+service#com.marianhello.bgloc.sync.AuthenticatorService
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:19:9-24:19
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:19:18-80
+intent-filter#android.accounts.AccountAuthenticator
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:20:13-22:29
+action#android.accounts.AccountAuthenticator
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:21:17-80
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:21:25-77
+meta-data#android.accounts.AccountAuthenticator
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:23:13-117
+	android:resource
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:23:77-114
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:23:24-76
+provider#com.marianhello.bgloc.sync.DummyContentProvider
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:25:9-181
+	android:authorities
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:25:19-66
+	android:syncable
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:25:155-178
+	android:exported
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:25:67-91
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:25:92-154
+service#com.marianhello.bgloc.LocationService
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:26:9-121
+	android:enabled
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:26:18-40
+	android:exported
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:26:41-65
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:26:66-118
+receiver#com.marianhello.bgloc.BootCompletedReceiver
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:27:9-31:20
+	android:enabled
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:27:19-41
+	android:exported
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:27:42-65
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:27:66-124
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:28:13-30:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:29:17-79
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:29:25-76
 uses-sdk
-ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:5-74
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:33:5-74
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/7d489755c9ebd9a1f7a8d015a1491558/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-11.8.0.aar/7d489755c9ebd9a1f7a8d015a1491558/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/6b1cf11a404ef4b0eb3d9c1bbe5e3e26/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.8.0.aar/6b1cf11a404ef4b0eb3d9c1bbe5e3e26/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/680698126c6bfbb052666d283cbbd9af/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:21:5-23:54
 MERGED from [:CordovaLib] /Users/mac/CarparkFinder/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] /Users/mac/CarparkFinder/platforms/android/CordovaLib/build/intermediates/manifests/full/debug/AndroidManifest.xml:25:5-44
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/9fe65395c846ae9f9df065e36bd57691/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-location-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-location-license-11.8.0.aar/9fe65395c846ae9f9df065e36bd57691/AndroidManifest.xml:4:5-43
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/f40c443b2c503089abcc5893dc67d23f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-fragment-25.2.0.aar/f40c443b2c503089abcc5893dc67d23f/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/787b79623e767b23206a4f2102439fff/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-media-compat-25.2.0.aar/787b79623e767b23206a4f2102439fff/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/e0ab44acf9a21597e77b6d5d191d87c0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-utils-25.2.0.aar/e0ab44acf9a21597e77b6d5d191d87c0/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/1a96aa72562d19dd7d37545122372b3d/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-core-ui-25.2.0.aar/1a96aa72562d19dd7d37545122372b3d/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/b5efb478f72e230c5339e79b16186851/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-compat-25.2.0.aar/b5efb478f72e230c5339e79b16186851/AndroidManifest.xml:21:5-23:58
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/f562fde15dff564e44095e3c5c1ebb0b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-base-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-license-11.8.0.aar/f562fde15dff564e44095e3c5c1ebb0b/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/58203f2746a60d8cf407f16776b0cb49/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-basement-license-11.8.0.aar/58203f2746a60d8cf407f16776b0cb49/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fbc273c958bf777016a2815b052612ff/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks-license:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-tasks-license-11.8.0.aar/fbc273c958bf777016a2815b052612ff/AndroidManifest.xml:4:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:25.2.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-25.2.0.aar/e98ff07bf99b90c06b46155bb39ad417/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:42-71
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:33:42-71
 	android:minSdkVersion
-		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:13:15-41
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:33:15-41
+uses-permission#android.permission.AUTHENTICATE_ACCOUNTS
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:34:5-80
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:34:22-77
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:35:5-71
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:35:22-68
+uses-permission#android.permission.READ_SYNC_SETTINGS
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:36:5-77
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:36:22-74
+uses-permission#android.permission.WRITE_SYNC_SETTINGS
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:37:5-78
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:37:22-75
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:38:5-81
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:38:22-78
+uses-permission#com.google.android.gms.permission.ACTIVITY_RECOGNITION
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:39:5-94
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:39:22-91
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:40:5-79
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:40:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:41:5-81
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:41:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:42:5-79
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:42:22-76
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:43:5-89
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:43:22-86
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:44:5-68
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:44:22-65
+uses-permission#android.hardware.location
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:45:5-65
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:45:22-62
+uses-feature#android.hardware.location.gps
+ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:46:5-66
+	android:name
+		ADDED from /Users/mac/CarparkFinder/platforms/android/app/src/main/AndroidManifest.xml:46:19-63
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.8.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/AndroidManifest.xml:24:13-79
