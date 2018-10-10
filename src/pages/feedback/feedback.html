@@ -7,21 +7,38 @@
     <ion-title>Feedback</ion-title>
   </ion-navbar>
 </ion-header>
-
 <!--Home Body-->
 <ion-content padding class="backgroundColor">
   <br/>
+  <form
+  [formGroup]="form"
+  (ngSubmit)="sendMessage()">
   <ion-list>
       <ion-item>
+          <ion-label stacked>Name</ion-label>
+          <ion-input type="string"
+          formControlName="strName"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Contact No</ion-label>
+            <ion-input type="string"
+            formControlName="strContactNo"></ion-input>
+          </ion-item>
+      <ion-item>
         <ion-label stacked>Email</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="string"
+        formControlName="strEmail"></ion-input>
       </ion-item>
-    
       <ion-item>
         <ion-label stacked>Content</ion-label>
-        <ion-textarea type="text"></ion-textarea>
+        <ion-textarea type="string"
+        formControlName="strContent"></ion-textarea>
       </ion-item>
     </ion-list>
     <br/>
-    <button ion-button full class="buttonColor">Submit</button>
+    <button ion-button full class="buttonColor"ion-button
+    color="primary"
+    text-center
+    block [disabled]="!form.valid">Submit</button>
+    </form>
 </ion-content>

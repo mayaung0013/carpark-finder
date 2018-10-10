@@ -1,12 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 139:
+/***/ 140:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedbackPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_email_composer__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,15 +20,64 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var FeedbackPage = /** @class */ (function () {
-    function FeedbackPage(navCtrl) {
+    function FeedbackPage(navCtrl, EMAIL, _ALERT, _FORM) {
         this.navCtrl = navCtrl;
+        this.EMAIL = EMAIL;
+        this._ALERT = _ALERT;
+        this._FORM = _FORM;
+        this.form = this._FORM.group({
+            "strName": ["", __WEBPACK_IMPORTED_MODULE_3__angular_forms__["Validators"].required],
+            "strContactNo": ["", __WEBPACK_IMPORTED_MODULE_3__angular_forms__["Validators"].required],
+            "strEmail": ["", __WEBPACK_IMPORTED_MODULE_3__angular_forms__["Validators"].required],
+            "strContent": ["", __WEBPACK_IMPORTED_MODULE_3__angular_forms__["Validators"].required]
+        });
     }
+    FeedbackPage.prototype.displayMessage = function (title, subTitle) {
+        var alert = this._ALERT.create({
+            title: title,
+            subTitle: subTitle,
+            buttons: ['Got it']
+        });
+        alert.present();
+    };
+    FeedbackPage.prototype.sendEmail = function (to, strName, strContactNo, strEmail, strContent) {
+        var _this = this;
+        this.EMAIL.isAvailable()
+            .then(function (available) {
+            _this.EMAIL.hasPermission()
+                .then(function (isPermitted) {
+                var email = {
+                    app: 'mailto',
+                    to: "mayaung@outlook.com",
+                    subject: "Carpark Finder Feedback",
+                    body: strContent
+                };
+                _this.EMAIL.open(email);
+            })
+                .catch(function (error) {
+                console.log('No access permission granted');
+                console.dir(error);
+            });
+        })
+            .catch(function (error) {
+            console.log('User does not appear to have device e-mail account');
+            console.dir(error);
+        });
+    };
+    FeedbackPage.prototype.sendMessage = function () {
+        // Retrieve the validated form fields
+        var to = "mayaung@outlook.com", Name = this.form.controls["strName"].value, ContactNo = this.form.controls["strContactNo"].value, Email = this.form.controls["strEmail"].value, subject = "Carpark Finder Feedback", message = this.form.controls["strContent"].value;
+        this.sendEmail(to, Name, Email, subject, message);
+    };
     FeedbackPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-feedback',template:/*ion-inline-start:"/Users/mac/CarparkFinder/src/pages/feedback/feedback.html"*/'<!--Navigation Bar-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Feedback</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<!--Home Body-->\n<ion-content padding class="backgroundColor">\n  <br/>\n  <ion-list>\n      <ion-item>\n        <ion-label stacked>Email</ion-label>\n        <ion-input type="text"></ion-input>\n      </ion-item>\n    \n      <ion-item>\n        <ion-label stacked>Content</ion-label>\n        <ion-textarea type="text"></ion-textarea>\n      </ion-item>\n    </ion-list>\n    <br/>\n    <button ion-button full class="buttonColor">Submit</button>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/CarparkFinder/src/pages/feedback/feedback.html"*/
+            selector: 'page-feedback',template:/*ion-inline-start:"/Users/mac/CarparkFinder/src/pages/feedback/feedback.html"*/'<!--Navigation Bar-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Feedback</ion-title>\n  </ion-navbar>\n</ion-header>\n<!--Home Body-->\n<ion-content padding class="backgroundColor">\n  <br/>\n  <form\n  [formGroup]="form"\n  (ngSubmit)="sendMessage()">\n  <ion-list>\n      <ion-item>\n          <ion-label stacked>Name</ion-label>\n          <ion-input type="string"\n          formControlName="strName"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label stacked>Contact No</ion-label>\n            <ion-input type="string"\n            formControlName="strContactNo"></ion-input>\n          </ion-item>\n      <ion-item>\n        <ion-label stacked>Email</ion-label>\n        <ion-input type="string"\n        formControlName="strEmail"></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label stacked>Content</ion-label>\n        <ion-textarea type="string"\n        formControlName="strContent"></ion-textarea>\n      </ion-item>\n    </ion-list>\n    <br/>\n    <button ion-button full class="buttonColor"ion-button\n    color="primary"\n    text-center\n    block [disabled]="!form.valid">Submit</button>\n    </form>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/CarparkFinder/src/pages/feedback/feedback.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__ionic_native_email_composer__["a" /* EmailComposer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["AlertController"],
+            __WEBPACK_IMPORTED_MODULE_3__angular_forms__["FormBuilder"]])
     ], FeedbackPage);
     return FeedbackPage;
 }());
@@ -35,17 +86,17 @@ var FeedbackPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 140:
+/***/ 141:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__searchresult_searchresult__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__searchresult_searchresult__ = __webpack_require__(369);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -78,15 +129,17 @@ var SearchPage = /** @class */ (function () {
         this.setCurrentPosition();
     }
     SearchPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
         //set google maps defaults
-        this.zoom = 10;
-        this.latitude = 1.291667; //39.8282;
-        this.longitude = 103.85; //-98.5795;
+        /*this.zoom = 10;
+        this.latitude = 1.291667;//39.8282;
+        this.longitude = 103.85;//-98.5795;
+    
         //create search FormControl
-        this.searchControl = new __WEBPACK_IMPORTED_MODULE_2__angular_forms__["FormControl"]();
+        this.searchControl = new FormControl();
+    
         //set current position
-        this.setCurrentPosition();
+        this.setCurrentPosition();*/
+        var _this = this;
         //load Places Autocomplete
         this.mapsAPILoader.load().then(function () {
             var nativeHomeInputBox = document.getElementById('SerchAddr').getElementsByTagName('input')[0];
@@ -141,7 +194,7 @@ var SearchPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 176:
+/***/ 177:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -154,11 +207,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 176;
+webpackEmptyAsyncContext.id = 177;
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -171,7 +224,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 220;
+webpackEmptyAsyncContext.id = 221;
 
 /***/ }),
 
@@ -181,9 +234,9 @@ webpackEmptyAsyncContext.id = 220;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback_feedback__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search_search__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__feedback_feedback__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__search_search__ = __webpack_require__(141);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -220,15 +273,16 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 368:
+/***/ 369:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchResultPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agm_core__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__agm_core__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__resultdetails_resultdetails__ = __webpack_require__(370);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -244,26 +298,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 /// <reference types="@types/googlemaps" />
 
+
 var SearchResultPage = /** @class */ (function () {
-    function SearchResultPage(navCtrl, mapsAPILoader, ngZone, _HTTP) {
+    function SearchResultPage(navCtrl, mapsAPILoader, ngZone, _HTTP, modalCtrl) {
+        var _this = this;
         this.navCtrl = navCtrl;
         this.mapsAPILoader = mapsAPILoader;
         this.ngZone = ngZone;
         this._HTTP = _HTTP;
+        this.modalCtrl = modalCtrl;
+        this.selected = [];
+        this.rows = [];
         this.columns = [
             { prop: 'carpark' },
             { name: 'address' },
             { name: 'freeSlotCount' }
         ];
-    }
-    SearchResultPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        //Data Table
-        this._HTTP
-            .get('../../assets/data/locations.json')
-            .subscribe(function (data) {
+        this.fetch(function (data) {
+            _this.selected = [data.locations[2]];
             _this.rows = data.locations;
         });
+    }
+    SearchResultPage.prototype.fetch = function (cb) {
+        var req = new XMLHttpRequest();
+        req.open('GET', "../../assets/data/locations.json");
+        req.onload = function () {
+            cb(JSON.parse(req.response));
+        };
+        req.send();
+    };
+    SearchResultPage.prototype.onSelect = function (_a) {
+        var selected = _a.selected;
+        var obj = { carpark: this.selected };
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__resultdetails_resultdetails__["a" /* SearchResultDetailsModal */], obj);
+        myModal.present();
+        //console.log('Select Event', selected, this.selected);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])("search"),
@@ -271,10 +340,10 @@ var SearchResultPage = /** @class */ (function () {
     ], SearchResultPage.prototype, "searchElementRef", void 0);
     SearchResultPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-searchresult',template:/*ion-inline-start:"/Users/mac/CarparkFinder/src/pages/searchresult/searchresult.html"*/'<!--Navigation Bar-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Search Result</ion-title>\n  </ion-navbar>\n</ion-header>\n<!--Home Body-->\n<ion-content padding class="backgroundColor">\n<ngx-datatable\n[sortType]="\'multi\'"\n[headerHeight]="50"\n[footerHeight]="50"\n[rowHeight]="50"\n[rows]="rows"\n[columns]="columns"\n[columnMode]="\'force\'"\n[limit]="10">\n</ngx-datatable>\n</ion-content>\n'/*ion-inline-end:"/Users/mac/CarparkFinder/src/pages/searchresult/searchresult.html"*/
+            selector: 'page-searchresult',template:/*ion-inline-start:"/Users/mac/CarparkFinder/src/pages/searchresult/searchresult.html"*/'<!--Navigation Bar-->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Search Result</ion-title>\n  </ion-navbar>\n</ion-header>\n<!--Home Body-->\n<ion-content padding class="backgroundColor">\n<ngx-datatable click=\'popUpModal()\'\n[sortType]="\'multi\'"\n[headerHeight]="50"\n[footerHeight]="50"\n[rowHeight]="50"\n[rows]="rows"\n[columns]="columns"\n[columnMode]="\'force\'"\n[limit]="10"\n[selected]="selected"\n[selectionType]="\'single\'"\n(select)=\'onSelect($event)\'>\n</ngx-datatable>\n\n<!--<div class=\'selected-column\'>\n  (activate)="onActivate($event)"\n  <h4>Selections</h4>\n  <ul>\n    <li *ngFor=\'let sel of selected\'>\n      {{sel.carpark}}\n    </li>\n    <li *ngIf="!selected.length">No Selections</li>\n  </ul>\n</div>\n</ion-content>-->\n'/*ion-inline-end:"/Users/mac/CarparkFinder/src/pages/searchresult/searchresult.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_2__agm_core__["b" /* MapsAPILoader */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]])
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"]])
     ], SearchResultPage);
     return SearchResultPage;
 }());
@@ -283,13 +352,71 @@ var SearchResultPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 369:
+/***/ 370:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchResultDetailsModal; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__ = __webpack_require__(371);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var SearchResultDetailsModal = /** @class */ (function () {
+    function SearchResultDetailsModal(navParams, navCtrl, modalCtrl, viewCtrl, launchNavigator, platform) {
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.modalCtrl = modalCtrl;
+        this.viewCtrl = viewCtrl;
+        this.launchNavigator = launchNavigator;
+        this.platform = platform;
+        this.carpark = this.navParams.get('carpark');
+        console.log('Select Event', this.carpark);
+    }
+    SearchResultDetailsModal.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    SearchResultDetailsModal.prototype.LaunchNavigation = function () {
+        var _this = this;
+        this.platform.ready().then(function () {
+            _this.launchNavigator.navigate([50.279306, -5.163158], {
+                start: "50.342847, -4.749904"
+            })
+                .then(function (success) { return alert('Launched navigator'); }, function (error) { return alert('Error launching navigator' + error); });
+        });
+    };
+    SearchResultDetailsModal = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-resultdetails',template:/*ion-inline-start:"/Users/mac/CarparkFinder/src/pages/resultdetails/resultdetails.html"*/'  <!--Home Body-->\n  <ion-content padding class="backgroundColor">\n    <button ion-button block (click)="closeModal()">Close</button>\n    <br/>\n    <ion-list>\n        <ion-item>Carpark:\n            <p *ngFor=\'let s of carpark\'>{{s.carpark}}</p>\n        </ion-item>\n   </ion-list>\n   <ion-list>\n    <ion-item>Address:\n            <p *ngFor=\'let s of carpark\'>{{s.address}}</p>\n    </ion-item>\n</ion-list>\n<ion-list>\n        <ion-item>Free Slot Count:\n                <p *ngFor=\'let s of carpark\'>{{s.freeSlotCount}}</p>\n        </ion-item>\n    </ion-list> \n<ion-list>\n    <ion-item>Price:\n            <p *ngFor=\'let s of carpark\'></p>\n    </ion-item>\n</ion-list> \n<br/>\n<button ion-button block color="secondary" (click)="LaunchNavigation()">\n     Navigate</button>\n  </ion-content>\n  '/*ion-inline-end:"/Users/mac/CarparkFinder/src/pages/resultdetails/resultdetails.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavParams"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["NavController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ModalController"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["ViewController"],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator__["a" /* LaunchNavigator */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["Platform"]])
+    ], SearchResultDetailsModal);
+    return SearchResultDetailsModal;
+}());
+
+//# sourceMappingURL=resultdetails.js.map
+
+/***/ }),
+
+/***/ 372:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(374);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(373);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(377);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -297,27 +424,30 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 374:
+/***/ 377:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(414);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_search_search__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_searchresult_searchresult__ = __webpack_require__(368);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(260);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(265);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__ = __webpack_require__(700);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__agm_core__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__swimlane_ngx_datatable__ = __webpack_require__(701);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__swimlane_ngx_datatable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__swimlane_ngx_datatable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_common_http__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_search_search__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_searchresult_searchresult__ = __webpack_require__(369);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_resultdetails_resultdetails__ = __webpack_require__(370);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(261);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ionic_select_searchable__ = __webpack_require__(703);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_ionic_select_searchable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_ionic_select_searchable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__agm_core__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swimlane_ngx_datatable__ = __webpack_require__(704);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__swimlane_ngx_datatable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__swimlane_ngx_datatable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_email_composer__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_launch_navigator__ = __webpack_require__(371);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -339,7 +469,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 //import {Geolocation} from '@ionic-native/geolocation';
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -351,19 +484,21 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__["a" /* FeedbackPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_search_search__["a" /* SearchPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_searchresult_searchresult__["a" /* SearchResultPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_resultdetails_resultdetails__["a" /* SearchResultDetailsModal */]
+                //NearByPage
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["BrowserModule"],
-                __WEBPACK_IMPORTED_MODULE_13__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_14__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicModule"].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: []
                 }),
-                __WEBPACK_IMPORTED_MODULE_11__agm_core__["a" /* AgmCoreModule */].forRoot({
+                __WEBPACK_IMPORTED_MODULE_12__agm_core__["a" /* AgmCoreModule */].forRoot({
                     apiKey: "AIzaSyCnahpwY4LRTYlzEHnER3B_Y8NR1HzmrVE",
                     libraries: ["places"]
                 }),
-                __WEBPACK_IMPORTED_MODULE_10_ionic_select_searchable__["SelectSearchableModule"],
-                __WEBPACK_IMPORTED_MODULE_12__swimlane_ngx_datatable__["NgxDatatableModule"],
+                __WEBPACK_IMPORTED_MODULE_11_ionic_select_searchable__["SelectSearchableModule"],
+                __WEBPACK_IMPORTED_MODULE_13__swimlane_ngx_datatable__["NgxDatatableModule"],
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicApp"]],
             entryComponents: [
@@ -371,13 +506,16 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__["a" /* FeedbackPage */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_search_search__["a" /* SearchPage */],
-                __WEBPACK_IMPORTED_MODULE_7__pages_searchresult_searchresult__["a" /* SearchResultPage */]
+                __WEBPACK_IMPORTED_MODULE_7__pages_searchresult_searchresult__["a" /* SearchResultPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_resultdetails_resultdetails__["a" /* SearchResultDetailsModal */]
                 //NearByPage
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_15__ionic_native_email_composer__["a" /* EmailComposer */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["IonicErrorHandler"] },
+                __WEBPACK_IMPORTED_MODULE_16__ionic_native_launch_navigator__["a" /* LaunchNavigator */],
             ],
         })
     ], AppModule);
@@ -388,18 +526,18 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 411:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(260);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(261);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(266);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_search_search__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_feedback_feedback__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_search_search__ = __webpack_require__(141);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -463,5 +601,5 @@ var MyApp = /** @class */ (function () {
 
 /***/ })
 
-},[369]);
+},[372]);
 //# sourceMappingURL=main.js.map

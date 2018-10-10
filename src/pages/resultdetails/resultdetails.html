@@ -1,0 +1,29 @@
+  <!--Home Body-->
+  <ion-content padding class="backgroundColor">
+    <button ion-button block (click)="closeModal()">Close</button>
+    <br/>
+    <ion-list>
+        <ion-item>Carpark:
+            <p *ngFor='let s of carpark'>{{s.carpark}}</p>
+        </ion-item>
+   </ion-list>
+   <ion-list>
+    <ion-item>Address:
+            <p *ngFor='let s of carpark'>{{s.address}}</p>
+    </ion-item>
+</ion-list>
+<ion-list>
+        <ion-item>Free Slot Count:
+                <p *ngFor='let s of carpark'>{{s.freeSlotCount}}</p>
+        </ion-item>
+    </ion-list> 
+<ion-list>
+    <ion-item>Price:
+            <p *ngFor='let s of carpark'></p>
+    </ion-item>
+</ion-list> 
+<br/>
+<button ion-button block color="secondary" (click)="LaunchNavigation()">
+     Navigate</button>
+  </ion-content>
+  

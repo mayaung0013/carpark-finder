@@ -40,7 +40,7 @@ constructor(public navCtrl: NavController, private mapsAPILoader: MapsAPILoader,
 
 ionViewDidLoad() {
     //set google maps defaults
-    this.zoom = 10;
+    /*this.zoom = 10;
     this.latitude = 1.291667;//39.8282;
     this.longitude = 103.85;//-98.5795;
 
@@ -48,7 +48,7 @@ ionViewDidLoad() {
     this.searchControl = new FormControl();
 
     //set current position
-    this.setCurrentPosition();
+    this.setCurrentPosition();*/
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {

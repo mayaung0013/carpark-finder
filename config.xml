@@ -93,5 +93,8 @@
         <variable name="CONTENT_AUTHORITY" value="$PACKAGE_NAME" />
     </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="^4.2.2">
+        <variable name="OKHTTP_VERSION" value="3.+" />
+    </plugin>
     <engine name="android" spec="7.0.0" />
 </widget>

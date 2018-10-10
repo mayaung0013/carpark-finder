@@ -25941,6 +25941,10 @@ page-home .fa-2x {
   font-size: 40px;
 }
 
+page-resultdetails .backgroundColor {
+  background-color: #ebe6e6;
+}
+
 page-search .backgroundColor {
   background-color: #3b3b3b;
 }
