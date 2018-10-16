@@ -44,28 +44,28 @@
         "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/xml/authenticator.xml"
     },
     {
-        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xhdpi_screen.png.flat",
-        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png"
-    },
-    {
         "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
         "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/res/drawable-xxhdpi-v4/googleg_standard_color_18.png"
     },
     {
-        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
-        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
+        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xhdpi_screen.png.flat",
+        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/drawable-land-xhdpi/screen.png"
     },
     {
-        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
-        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
+        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_text_light.xml.flat",
+        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/res/color/common_google_signin_btn_text_light.xml"
     },
     {
         "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_disabled.xml.flat",
         "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/res/drawable/common_google_signin_btn_text_disabled.xml"
     },
     {
-        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/color_common_google_signin_btn_text_light.xml.flat",
-        "source": "/Users/mac/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/c301c10185599616fe5effaae234a7a1/res/color/common_google_signin_btn_text_light.xml"
+        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat",
+        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/drawable-land-ldpi/screen.png"
+    },
+    {
+        "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat",
+        "source": "/Users/mac/CarparkFinder/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png"
     },
     {
         "merged": "/Users/mac/CarparkFinder/platforms/android/app/build/intermediates/res/merged/debug/drawable_common_google_signin_btn_icon_light.xml.flat",

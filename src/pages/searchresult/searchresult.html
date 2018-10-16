@@ -9,7 +9,7 @@
 </ion-header>
 <!--Home Body-->
 <ion-content padding class="backgroundColor">
-<ngx-datatable
+<ngx-datatable click='popUpModal()'
 [sortType]="'multi'"
 [headerHeight]="50"
 [footerHeight]="50"
@@ -17,6 +17,21 @@
 [rows]="rows"
 [columns]="columns"
 [columnMode]="'force'"
-[limit]="10">
+[reorderable]="reorderable"
+[limit]="10"
+[selected]="selected"
+[selectionType]="'single'"
+(select)='onSelect($event)'>
 </ngx-datatable>
-</ion-content>
+
+<!--<div class='selected-column'>
+  (activate)="onActivate($event)"
+  <h4>Selections</h4>
+  <ul>
+    <li *ngFor='let sel of selected'>
+      {{sel.carpark}}
+    </li>
+    <li *ngIf="!selected.length">No Selections</li>
+  </ul>
+</div>
+</ion-content>-->

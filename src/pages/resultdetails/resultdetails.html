@@ -1,0 +1,40 @@
+  <!--Home Body-->
+  <ion-content padding class="backgroundColor">
+      <h2>Details</h2>
+    <br/>
+    <ion-list>
+        <ion-item>Area:
+            <p *ngFor='let s of carpark'>{{s.area}}</p>
+        </ion-item>
+   </ion-list>
+   <ion-list>
+    <ion-item>Address:
+            <p *ngFor='let s of carpark'>{{s.development}}</p>
+    </ion-item>
+</ion-list>
+<ion-list>
+        <ion-item>Available Lots:
+                <p *ngFor='let s of carpark'>{{s.availableLots}}</p>
+        </ion-item>
+    </ion-list> 
+    <ion-list>
+            <ion-item>Agency:
+                    <p *ngFor='let s of carpark'>{{s.agency}}</p>
+            </ion-item>
+        </ion-list>
+        <ion-list>
+                <ion-item>Lot Type:
+                        <p *ngFor='let s of carpark'>{{s.lotType}}</p>
+                </ion-item>
+            </ion-list>
+<ion-list>
+    <ion-item>Price:
+            <p *ngFor='let s of carpark'></p>
+    </ion-item>
+</ion-list> 
+<br/>
+<button ion-button block color="secondary" (click)="LaunchNavigation()">
+     Navigate</button><br/>
+<button ion-button block (click)="closeModal()">Close</button>
+  </ion-content>
+  

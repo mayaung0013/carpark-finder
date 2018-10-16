@@ -9,6 +9,9 @@ page-searchresult {
     agm-map {
         height: 500px;
       }
+      .ngx-datatable{
+        overflow-y: visible;
+      }
       .datatable-header {
         background: rgb(255, 115, 0);
         padding: 1em 0 0 1em;
@@ -33,10 +36,11 @@ page-searchresult {
      }
   
      .datatable-body-cell {
-        font-size: 1.2em;
+        font-size: 1em;
         padding: 1em;
+        width: auto;
+        height:auto;
      }
-  
   
      // Style footer appearance
      .datatable-footer {
